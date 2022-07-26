@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #ececec;
+}
+nav{
+    position: absolute;
+    width: 90vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    color: white;
+}
+nav h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav label{
+    font-size: 2rem;
+}
+nav #nav-box{
+    position: absolute;
+    top: -1000px;
+    right: 50px;
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    transition: all 550ms ease-in-out;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.7rem;
+    text-transform: lowercase;
+    transition: all 1s ease-in-out;
+}
+nav ul li a:hover{
+    text-transform: uppercase;
+}
+#check{
+    display: none;
+}
+#check:checked ~ #nav-box{
+    top: 100px;
+}
+#x{
+    width: 8vw;
+    height: 8vw;  
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: red;
+    border: 2px solid red;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#bars{
+    color: black;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 10px;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* HERO SECTION */
+.hero{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.hero .hero-title{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.hero .hero-title .wraper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero .hero-title h1{
+    font-size: 2rem;
+    text-align: center;
+}
+.hero .hero-title p{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.hero .hero-title a{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 1.8rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    transition: all 500ms ease-in-out;
+}
+.hero .hero-title a:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.fa-khanda{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+.hero .hero-img img{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+@media screen and (min-width:768px) {
+    #mobile{
+        display: none;
+    }
+    #desktop{
+        width: 100%;
+        height: 100%;
+    }
+    .hero{
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .hero .hero-title{
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
+@media screen and (min-width:1020px) {
+    #x{
+        display: none;
+    }
+    #bars{
+        display: none;
+    }
+    nav{
+        justify-content: space-between;
+    }
+    nav h1{
+        padding: 3rem;
+    }
+    nav label{
+        display: none;
+    }
+    nav #nav-box{
+        width: 50%;
+        height: 100px;
+        position: static;
+        flex-direction: row ;
+        justify-content: space-around;
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.0);
+    }
+    nav ul li a{
+        text-transform: uppercase;
+        color: white;
+    }
+    nav ul li a:hover{
+        text-transform: lowercase;
+    }
+    .hero .hero-title{
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .hero .hero-title h1{
+        font-size: 3rem;
+        width: 40%;
+        text-align: left;
+    }
+    .hero .hero-title p{
+        width: 40%;
+        text-align: left;
+        font-size: 1rem;
+        padding-bottom: 10px;
+    }
+    .wraper
+}
